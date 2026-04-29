@@ -1,14 +1,21 @@
-const STORAGE_KEY = "runClubPhotos";
+const STORAGE_KEY = "foodiesRunClubPhotos";
 const form = document.getElementById("uploadForm");
 const photoGrid = document.getElementById("photoGrid");
 
 const starterPhotos = [
   {
-    title: "Kickoff Run",
+    title: "Sunrise Miles + Croissants",
     date: "2026-04-20",
     photoUrl:
-      "https://images.unsplash.com/photo-1571008887538-b36bb32f4571?auto=format&fit=crop&w=1200&q=80",
-    caption: "A sunny welcome run through the neighborhood."
+      "https://images.unsplash.com/photo-1526318896980-cf78c088247c?auto=format&fit=crop&w=1200&q=80",
+    caption: "Easy social run followed by pastries and coffee."
+  },
+  {
+    title: "Waterfront Loop + Tacos",
+    date: "2026-04-13",
+    photoUrl:
+      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1200&q=80",
+    caption: "Golden hour miles and the best post-run bite in town."
   }
 ];
 
