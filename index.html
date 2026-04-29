@@ -3,72 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noe Bad Vibes Run Club</title>
+    <title>Foodies Run Club</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
+    <header class="hero" id="home">
       <nav class="top-nav">
-        <h1>Noe Bad Vibes Run Club</h1>
-        <a class="button secondary" href="#admin">Admin Portal</a>
+        <a class="logo" href="#home" aria-label="Foodies Run Club Home">
+          <span class="logo-mark">🍊🏃‍♀️</span>
+          <span class="logo-text">Foodies Run Club</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#admin">Admin</a>
+        </div>
       </nav>
-      <div class="hero-copy">
-        <p class="eyebrow">Community • Movement • Joy</p>
-        <h2>Join us for weekly runs and post-run memories.</h2>
-        <p>
-          Inspired by your reference layout, this starter app gives your run club
-          a modern homepage and an admin portal for uploading photos after each run.
-        </p>
+
+      <div class="hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">FOOD • FRIENDS • FITNESS</p>
+          <h1>FOODIES RUN CLUB</h1>
+          <p>
+            A social run club inspired by Noe Bad Vibes energy — we run together,
+            then hit local food spots together.
+          </p>
+          <div class="hero-cta-row">
+            <a class="button" href="#upcoming">Next Meetup</a>
+            <a class="button secondary" href="#admin">Upload Photos</a>
+          </div>
+        </div>
+
+        <div class="hero-collage" aria-label="Foodies Run Club photo collage">
+          <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=800&q=80" alt="Runners smiling outdoors" />
+          <img src="https://images.unsplash.com/photo-1526318896980-cf78c088247c?auto=format&fit=crop&w=800&q=80" alt="Coffee and pastries after a run" />
+          <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800&q=80" alt="Friends sharing food together" />
+          <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80" alt="Brunch table with healthy food" />
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="section" id="upcoming">
-        <h3>Upcoming Run</h3>
+      <section class="section" id="about">
+        <h2>ABOUT</h2>
+        <p class="section-sub">Run first. Brunch second. Good vibes always.</p>
         <div class="card">
-          <p><strong>When:</strong> Saturdays at 8:00 AM</p>
-          <p><strong>Meet:</strong> Clubhouse Coffee, Noe Valley</p>
-          <p><strong>Pace:</strong> All levels welcome</p>
+          <p>
+            We host weekly all-level runs and organize post-run eats at local cafés,
+            breakfast spots, and pop-ups. No pace pressure — walkers and beginners welcome.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="upcoming">
+        <h2>UPCOMING MEETUP</h2>
+        <div class="card split-card">
+          <div>
+            <p><strong>Date:</strong> Saturdays</p>
+            <p><strong>Time:</strong> 8:30 AM</p>
+            <p><strong>Meet Point:</strong> Market Square Fountain</p>
+            <p><strong>Distance:</strong> 3-4 miles</p>
+            <p><strong>Food Stop:</strong> Rotating local spot</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1000&q=80" alt="Running shoes near breakfast food" />
         </div>
       </section>
 
       <section class="section" id="gallery">
-        <div class="section-header">
-          <h3>Run Gallery</h3>
-          <p>Photos uploaded from the admin portal appear here.</p>
-        </div>
+        <h2>RUN + BITE GALLERY</h2>
+        <p class="section-sub">More photos, more memories, more community.</p>
         <div id="photoGrid" class="photo-grid" aria-live="polite"></div>
       </section>
 
       <section class="section" id="admin">
-        <h3>Admin Portal</h3>
+        <h2>ADMIN PORTAL</h2>
         <form id="uploadForm" class="card admin-form">
           <label>
-            Run title
-            <input type="text" id="runTitle" required placeholder="Sunrise 5K" />
+            Meetup title
+            <input type="text" id="runTitle" required placeholder="Sunrise Shuffle + Bagels" />
           </label>
           <label>
-            Run date
+            Meetup date
             <input type="date" id="runDate" required />
           </label>
           <label>
             Photo URL
-            <input
-              type="url"
-              id="photoUrl"
-              required
-              placeholder="https://example.com/photo.jpg"
-            />
+            <input type="url" id="photoUrl" required placeholder="https://example.com/photo.jpg" />
           </label>
           <label>
             Caption
-            <textarea id="caption" rows="3" placeholder="Fog, hills, and great vibes."></textarea>
+            <textarea id="caption" rows="3" placeholder="4 miles and amazing pastries."></textarea>
           </label>
           <button class="button" type="submit">Upload to gallery</button>
         </form>
@@ -76,7 +107,7 @@
     </main>
 
     <footer>
-      <p>© <span id="year"></span> Noe Bad Vibes Run Club</p>
+      <p>© <span id="year"></span> Foodies Run Club</p>
     </footer>
 
     <script src="app.js"></script>
